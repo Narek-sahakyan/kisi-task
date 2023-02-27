@@ -1,1 +1,9 @@
-@import-normalize;
+// Configs
+@import "./functions.scss";
+@import "./variables.scss";
+@import "./mixins.scss";
+
+// components
+@import "./base/index.scss";
+@import "./components/index.scss";
+@import "./utilities.scss";
