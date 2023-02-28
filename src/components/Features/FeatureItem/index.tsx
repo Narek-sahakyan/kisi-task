@@ -7,16 +7,10 @@ import "./styles.scss";
 export type FeatureItemProps = {
   className?: string;
   data: Random;
-  showInfo?: boolean;
   index: number;
 };
 
-const FeatureItem: FC<FeatureItemProps> = ({
-  data,
-  className,
-  index,
-  showInfo = false,
-}) => {
+const FeatureItem: FC<FeatureItemProps> = ({ data, className, index }) => {
   const { urls } = data;
   return (
     <div className={clsx(`features-item-${index + 1}`, className)}>
@@ -27,7 +21,7 @@ const FeatureItem: FC<FeatureItemProps> = ({
         rel="noreferrer"
       >
         <article className="feature">
-          {showInfo && (
+          {index === 0 && (
             <div className="feature-info">
               <h2>Shared workspaces</h2>
               <p>
@@ -36,7 +30,7 @@ const FeatureItem: FC<FeatureItemProps> = ({
               </p>
             </div>
           )}
-          <h3 className="feature-title">Visitor Access</h3>
+          <h3 className="feature-title">{data.description}</h3>
           <div className="feature-content">
             <figure className="feature-figure">
               <div

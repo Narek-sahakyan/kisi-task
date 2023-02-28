@@ -8,19 +8,14 @@ function App() {
   return (
     <main className="app">
       <div className="container">
-        <div className="main-content h-full-screen">
+        <div className="h-full-screen">
           <Features
             className="h-full"
             header="Connect people & spaces"
             footer={<button className="btn">Button</button>}
           >
             {galleryImages.map((image, index) => (
-              <FeatureItem
-                index={index}
-                key={image.id}
-                data={image}
-                showInfo={index === 0}
-              />
+              <FeatureItem index={index} key={image.id} data={image} />
             ))}
           </Features>
         </div>

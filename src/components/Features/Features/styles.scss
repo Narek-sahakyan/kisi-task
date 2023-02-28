@@ -1,4 +1,7 @@
 .features {
+  padding: 98px 0 158px;
+  min-height: 100vh;
+
   &-grid {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
