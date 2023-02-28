@@ -1,0 +1,86 @@
+.feature {
+  height: 100%;
+  background-color: var(--color-purple);
+  position: relative;
+  padding: 1.25rem;
+  overflow: hidden;
+
+  &-title {
+    position: relative;
+    z-index: 2;
+    color: var(--color-white);
+  }
+
+  &-content {
+    position: absolute;
+    inset: 0;
+    isolation: isolate;
+  }
+
+  &-arrow {
+    color: var(--color-white);
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 20px;
+  }
+
+  &-info,
+  &-backdrop {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+  }
+
+  &-info {
+    background-color: transparent;
+    z-index: 10;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+    padding: 20px;
+    color: var(--color-white);
+  }
+
+  &-backdrop {
+    z-index: 1;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    background-color: var(--color-purple);
+    opacity: 0.35;
+  }
+
+  &-figure {
+    height: 100%;
+    display: block;
+  }
+
+  &-media {
+    height: 100%;
+    transition: transform 0.3s ease-out;
+    transform: scale(1);
+    will-change: transform;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  &:hover &-backdrop {
+    opacity: 0;
+  }
+
+  &:hover &-info {
+    transform: translateX(0);
+    background-color: var(--color-blue);
+    opacity: 1;
+  }
+
+  &:hover &-media {
+    transform: scale(1.05);
+  }
+}

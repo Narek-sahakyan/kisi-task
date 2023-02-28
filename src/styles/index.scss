@@ -4,6 +4,8 @@
 @import "./mixins.scss";
 
 // components
+@import "./fonts.scss";
+@import "root";
 @import "./base/index.scss";
 @import "./components/index.scss";
 @import "./utilities.scss";

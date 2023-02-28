@@ -1,3 +1,8 @@
+$font-family-base: "Neue Haas Unica";
+
+$btn-padding-x: 1.25rem;
+$btn-padding-y: 0.75rem;
+
 $container-padding-x: 1.25rem;
 
 $container-max-widths: (
@@ -16,3 +21,16 @@ $grid-breakpoints: (
   xl: 1200px,
   xxl: 1400px,
 );
+
+$colors: (
+  "purple": #222647,
+  "blue": #4a52ff,
+  "tint ": #c9cbff,
+  "gray": #c7c5c3,
+  "yellow": #fffb94,
+  "green": #96e697,
+  "black": #191919,
+  "white": #fff,
+);
+
+$color-text-base: #fff;

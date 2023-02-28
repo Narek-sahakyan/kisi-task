@@ -1,0 +1,23 @@
+.btn {
+  display: inline-block;
+  padding: var(--btn-padding-y) var(--btn-padding-x);
+  font-family: var(--font-family-base);
+  font-weight: 400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  text-align: center;
+  vertical-align: middle;
+  color: var(--color-text-base);
+  border-radius: 9999px;
+  background: var(--color-blue);
+  outline: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+  &:active {
+    transform: scale(0.98);
+  }
+}

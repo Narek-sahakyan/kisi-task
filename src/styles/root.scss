@@ -1,0 +1,10 @@
+:root {
+  @each $color, $value in $colors {
+    --color-#{$color}: #{$value};
+  }
+
+  --font-family-base: #{$font-family-base};
+  --btn-padding-x: #{$btn-padding-x};
+  --btn-padding-y: #{$btn-padding-y};
+  --color-text-base: #{$color-text-base};
+}
